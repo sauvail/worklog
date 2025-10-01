@@ -35,7 +35,7 @@ Example file:
 
 2. Install dependencies:
    ```bash
-   pip install keyboard
+   pip install keyboard pygetwindow
    ```
    (`tkinter` is included by default with Python on Windows.)
 
