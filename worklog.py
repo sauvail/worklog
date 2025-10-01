@@ -28,7 +28,7 @@ def log_text():
         text = entry.get().strip()
         if text:
             now = datetime.now()
-            timestamp = now.strftime("%H:%M")
+            timestamp = now.strftime("%H:%M") + " | "
             date_str = now.strftime("%d/%m/%Y")
             if not os.path.exists(FILE_PATH):
                 with open(FILE_PATH, "w", encoding="utf-8") as f:
