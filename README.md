@@ -9,8 +9,14 @@ Programme permettant d’ajouter rapidement des notes horodatées dans un fichie
   - La note est enregistrée dans `worklog.txt` dans le dossier utilisateur courant  
     (exemple : `C:\Users\MonNom\worklog.txt`).  
   - Le premier message de chaque jour est précédé d’un en-tête `----- dd/mm/yyyy -----`.  
+  - La fenêtre est sobre, compacte et reçoit automatiquement le **focus**.  
+  - Appuyer sur **Entrée** enregistre la note.  
+  - Appuyer sur **Échap** ferme la fenêtre sans enregistrer.  
+
 - **Ctrl + Maj + F2** : ouvre directement le fichier `worklog.txt` dans le Bloc-notes.  
-- **Ctrl + Maj + F3** : ferme le programme avec une fenêtre de confirmation.  
+
+- **Ctrl + Maj + F3** : ferme le programme avec une fenêtre de confirmation, en arrêtant proprement toutes les tâches en arrière-plan.  
+
 - Le fichier est créé automatiquement s’il n’existe pas.
 
 Exemple de fichier :
@@ -75,6 +81,8 @@ Le programme se lancera automatiquement au prochain redémarrage de Windows.
 ---
 
 ## Récapitulatif des raccourcis
+
 - **Ctrl + Maj + F1** → Ajouter une note  
 - **Ctrl + Maj + F2** → Ouvrir le fichier `worklog.txt`  
-- **Ctrl + Maj + F3** → Quitter le programme (avec confirmation)
+- **Ctrl + Maj + F3** → Quitter le programme avec confirmation  
+- **Échap (dans la textbox)** → Fermer la textbox sans enregistrer
