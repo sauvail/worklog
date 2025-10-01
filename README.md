@@ -1,88 +1,88 @@
 # Worklog Shortcut Logger
 
-Programme permettant d’ajouter rapidement des notes horodatées dans un fichier texte via des raccourcis clavier globaux.
+A program to quickly add timestamped notes to a text file using global keyboard shortcuts.
 
 ---
 
-## Fonctionnalités
-- **Ctrl + Maj + F1** : ouvre une petite fenêtre pour saisir une note.  
-  - La note est enregistrée dans `worklog.txt` dans le dossier utilisateur courant  
-    (exemple : `C:\Users\MonNom\worklog.txt`).  
-  - Le premier message de chaque jour est précédé d’un en-tête `----- dd/mm/yyyy -----`.  
-  - La fenêtre est sobre, compacte et reçoit automatiquement le **focus**.  
-  - Appuyer sur **Entrée** enregistre la note.  
-  - Appuyer sur **Échap** ferme la fenêtre sans enregistrer.  
+## Features
+- **Ctrl + Shift + F1**: Opens a small window to enter a note.  
+  - The note is saved in `worklog.txt` in the current user's folder  
+    (example: `C:\Users\YourName\worklog.txt`).  
+  - The first message of each day is preceded by a header `----- dd/mm/yyyy -----`.  
+  - The window is compact, minimal, and automatically receives **focus**.  
+  - Press **Enter** to save the note.  
+  - Press **Escape** to close the window without saving.  
 
-- **Ctrl + Maj + F2** : ouvre directement le fichier `worklog.txt` dans le Bloc-notes.  
+- **Ctrl + Shift + F2**: Opens the `worklog.txt` file in Notepad.  
 
-- **Ctrl + Maj + F3** : ferme le programme avec une fenêtre de confirmation, en arrêtant proprement toutes les tâches en arrière-plan.  
+- **Ctrl + Shift + F3**: Closes the program with a confirmation dialog, properly stopping all background tasks.  
 
-- Le fichier est créé automatiquement s’il n’existe pas.
+- The file is automatically created if it does not exist.
 
-Exemple de fichier :
+Example file:
 ```
 ----- 01/10/2025 -----
-09:12 Premier message du jour
-10:30 Autre message
+09:12 First note of the day
+10:30 Another note
 ```
 
 ---
 
 ## Installation
 
-1. Installer [Python 3](https://www.python.org/downloads/windows/) pour Windows.  
-   Pendant l’installation, cocher **"Add Python to PATH"**.
+1. Install [Python 3](https://www.python.org/downloads/windows/) on Windows.  
+   During installation, check **"Add Python to PATH"**.
 
-2. Installer les dépendances :
+2. Install dependencies:
    ```bash
    pip install keyboard
    ```
-   (`tkinter` est inclus par défaut avec Python sur Windows.)
+   (`tkinter` is included by default with Python on Windows.)
 
-3. Sauvegarder le script sous `worklog.py`.
+3. Save the script as `worklog.py`.
 
-4. Lancer :
-   - Avec console visible :  
+4. Run:
+   - With console visible:  
      ```bash
      python worklog.py
      ```
-   - En arrière-plan (sans fenêtre noire) :  
+   - In the background (no console window):  
      ```bash
      pythonw worklog.py
      ```
 
 ---
 
-## Génération d’un exécutable (.exe)
+## Creating an executable (.exe)
 
-1. Installer pyinstaller :
+1. Install pyinstaller:
    ```bash
    pip install pyinstaller
    ```
 
-2. Créer l’exécutable :
+2. Create the executable:
    ```bash
    pyinstaller --noconsole --onefile worklog.py
    ```
 
-3. Le fichier final se trouve dans `dist/worklog.exe`.
+3. The final file will be in `dist/worklog.exe`.
 
 ---
 
-## Lancement automatique au démarrage
+## Auto-start on Windows
 
-Copier `worklog.exe` dans le dossier :
+Copy `worklog.exe` to:
 ```
-C:\Users\<UTILISATEUR>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+C:\Users\<USERNAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ```
 
-Le programme se lancera automatiquement au prochain redémarrage de Windows.
+The program will automatically start at the next Windows login.
 
 ---
 
-## Récapitulatif des raccourcis
+## Shortcut keys
 
-- **Ctrl + Maj + F1** → Ajouter une note  
-- **Ctrl + Maj + F2** → Ouvrir le fichier `worklog.txt`  
-- **Ctrl + Maj + F3** → Quitter le programme avec confirmation  
-- **Échap (dans la textbox)** → Fermer la textbox sans enregistrer
+- **Ctrl + Shift + F1** → Add a note  
+- **Ctrl + Shift + F2** → Open `worklog.txt`  
+- **Ctrl + Shift + F3** → Quit the program with confirmation  
+- **Escape (in the textbox)** → Close the textbox without saving
